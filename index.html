@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>React Playground</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root" class="container"></div>
+
+    <script type="text/babel">
+      const Component = (props) => {
+        const [text, setText] = React.useState(props.name);
+
+        return (<h1>{`Hello there, ${text}!`}</h1>);
+      }
+
+      ReactDOM.render(
+        <Component name="Bogdan" />,
+        document.getElementById('root'),
+      );
+    </script>
+  </body>
+</html>
